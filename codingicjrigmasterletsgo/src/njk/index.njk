@@ -1,0 +1,25 @@
+{% extends '_templates/base.njk' %}
+
+{% block page_title %}Index page title{% endblock %}
+
+{% block page_description %}The index search description for this page goes here.{% endblock %}
+
+{% block content %}
+<div class="container">
+<div class="buildingtext">
+  <h1>UT Study Buildings</h1>
+  <p>Learn about 2 of UT's best study spots!</p>
+</div>
+  
+  <div class="row">
+  <div class="col-md-6">
+    {% for building in buildings.buildings %}
+      <div class="col">
+        <img src="img/{{ building.slug }}.jpg" alt="" class="img-fluid">
+        <h3><a href="buildings/{{ building.slug }}.html">{{ building.name }}</a></h3>
+      </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+{% endblock %}
