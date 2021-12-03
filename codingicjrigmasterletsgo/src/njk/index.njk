@@ -7,18 +7,27 @@
 {% block content %}
 <div class="container">
 <div class="buildingtext">
-  <h1>UT Austin's Best Study Buildings</h1>
-  <p>Learn about 2 of UT Austin's top study spots!</p>
+  <h2>UT Austin's Best Study Buildings</h2>
 </div>
-  
+
+<div class="learn">
+  <p>Learn about UT Austin's top study spots! </p>
+</div>
+
+ <div class="picturecredit"> 
+  <p>Photos by Austin Martinez </p>
+</div>
+
   <div class="row">
   <div class="col-md-6">
     {% for building in buildings.buildings %}
       <div class="col">
-        <img src="img/{{ building.slug }}.jpg" alt="UT study building" class="img-fluid">
         <h3><a href="buildings/{{ building.slug }}.html">{{ building.name }}</a></h3>
+        <img src="img/{{ building.slug }}.jpg" alt="UT study building" class="img-fluid">
       </div>
   </div>
+
+  
   {% endfor %}
 </div>
 </div>
