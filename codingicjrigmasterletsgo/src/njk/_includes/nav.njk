@@ -11,7 +11,7 @@
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           {% for building in buildings.buildings %}
-          <li><a class="dropdown-item" href="{{ relative_path }}buildings/{{ building.slug}}.html">{{ building.name }}</a></li>
+          <a class="dropdown-item" href="{{ relative_path }}buildings/{{ building.slug}}.html">{{ building.name }}</a>
           {% endfor %}
         </ul>
       </div>
